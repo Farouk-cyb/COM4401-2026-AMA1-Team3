@@ -16,7 +16,7 @@
 
 | Member | Role / build owned | Qty | Budget each | Workstation level |
 |--------|--------------------|-----|-------------|-------------------|
-|Zidan | Administrative Assistant | 3 | £850 | Basic office hardware |
+|Zidan | Administrative Assistant | 3 | £950 | Basic office hardware |
 | Fae| Project Manager | 2 | £1,250 | Business workstation |
 |Farouk| Architect / CAD Designer | 5 | £2,350 | CAD build with dedicated GPU |
 | Mohammed| 3D Visualisation Specialist | 2 | £3,600 | High-performance rendering |
