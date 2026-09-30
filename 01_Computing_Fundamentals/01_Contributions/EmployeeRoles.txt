@@ -1,0 +1,18 @@
+-- create
+CREATE TABLE EmployeeRoles (
+  RoleID INTEGER PRIMARY KEY,
+  RoleName VARCHAR(50) NOT NULL,
+  StaffCount INTEGER NOT NULL,
+  Tasks VARCHAR(255) NOT NULL,
+  PerformanceNeed VARCHAR(100) NOT NULL,
+  BudgetPerUnit DECIMAL(10,1) NOT NULL
+);
+
+-- insert
+INSERT INTO EmployeeRoles VALUES (0001, 'Administrative Assistant', 3, "Email, documents, spreadsheets, web systems, online meetings, and basic customer records.", "Basic office hardware workstation", 950);
+INSERT INTO EmployeeRoles VALUES (0002, 'Project Manager', 2, "Reports, meetings, project planning, reviewing drawings, dashboards, and client communication.", "Business hardware workstation with stronger display/workflow setup", 1300);
+INSERT INTO EmployeeRoles VALUES (0003, 'Architect', 5, "CAD drawings, 2D drafting, 3D modelling, large design files, multiple monitors, and design reviews.", "CAD hardware workstation with dedicated GPU and suitable display", 2500);
+INSERT INTO EmployeeRoles VALUES (0004, '3D Visualisation Specialist', 2, "Rendering, 3D visualisation, large models, high-resolution textures, media output, and client visual presentations.", "High-performance rendering/visualisation hardware workstation", 3750);
+
+-- fetch 
+SELECT * FROM EmployeeRoles
