@@ -11,7 +11,7 @@ CREATE TABLE FinalRecommendation (
 -- insert
 INSERT INTO FinalRecommendation VALUES (0001, 'Ahmed', 2, 'Visualisation', 6510.64, '3D Visualisation', "Under £989") ;
 INSERT INTO FinalRecommendation VALUES (0002, 'Zidan', 3,'Administrative Assistant', 2220, '3D Visualisation', "Under £630") ;
-INSERT INTO FinalRecommendation VALUES (0003, 'Roble', 5,'Architect', 11960, 'Architect', "Under £540") ;
+INSERT INTO FinalRecommendation VALUES (0003, 'Roble', 5,'Architect', 12200, 'Architect', "Under £60") ;
 INSERT INTO FinalRecommendation VALUES (0004, ' ', 10, '10 Workstation ', 20691, ' ', "Under £4759") ;
 
 -- fetch 
