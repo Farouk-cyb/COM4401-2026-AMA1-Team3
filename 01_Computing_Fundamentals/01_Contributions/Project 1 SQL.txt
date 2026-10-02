@@ -101,22 +101,22 @@ INSERT INTO BuildItems VALUES (0032, 0002, 'Under/over hardware budget', '', '',
 
 
 -- Roble (Architect)
-INSERT INTO BuildItems VALUES (0033, 0003, 'CPU', '', '', NULL);
-INSERT INTO BuildItems VALUES (0034, 0003, 'Motherboard', '', '', NULL);
-INSERT INTO BuildItems VALUES (0035, 0003, 'RAM','','', NULL);
-INSERT INTO BuildItems VALUES (0036, 0003, 'Storage', '','', NULL);
-INSERT INTO BuildItems VALUES (0037, 0003, 'GPU', '', '', NULL);
-INSERT INTO BuildItems VALUES (0038, 0003, 'PSU', '', '', NULL);
-INSERT INTO BuildItems VALUES (0039, 0003, 'Case/cooling','','', NULL);
-INSERT INTO BuildItems VALUES (0040, 0003, 'Monitor', '', '', NULL);
-INSERT INTO BuildItems VALUES (0041, 0003, 'Keyboard/mouse', '','', NULL);
-INSERT INTO BuildItems VALUES (0042, 0003, 'Webcam','', '', NULL);
-INSERT INTO BuildItems VALUES (0043, 0003, 'Headset','', '', NULL);
-INSERT INTO BuildItems VALUES (0044, 0003, 'Network/cables/adapters','', '', NULL);
-INSERT INTO BuildItems VALUES (0045, 0003, 'Role-specific hardware peripheral', '', '', NULL);
-INSERT INTO BuildItems VALUES (0046, 0003, 'Total hardware workstation cost', '', '', NULL);
-INSERT INTO BuildItems VALUES (0047, 0003, 'Role hardware budget', '', '', NULL);
-INSERT INTO BuildItems VALUES (0048, 0003, 'Under/over hardware budget', '', '', NULL);
+INSERT INTO BuildItems VALUES (0033, 0003, 'CPU', 'AMD Ryzen 7 9700X', '8 Cores / 16 Threads, 3.8GHz, AM5', 245);
+INSERT INTO BuildItems VALUES (0034, 0003, 'Motherboard', 'MSI B650 PRO DDR5', 'Micro-ATX, AMD B650 chipset, AM5 socket', 143);
+INSERT INTO BuildItems VALUES (0035, 0003, 'RAM','Corsair Vengeance RGB White DDR5-6000 CL30','32GB (2x16GB), DDR5, 4800MHz', 500);
+INSERT INTO BuildItems VALUES (0036, 0003, 'Storage', 'Kingston KC3000','1TB M.2 SSD PCIe 4.0 NVMe', 282);
+INSERT INTO BuildItems VALUES (0037, 0003, 'GPU', 'GeForce RTX 5060 Ti ', 'WINDFORCE OC 8G GDDR7', 420);
+INSERT INTO BuildItems VALUES (0038, 0003, 'PSU', 'Corsair RM650e', '650W Fully Modular, Gold Rated', 74);
+INSERT INTO BuildItems VALUES (0039, 0003, 'Case/cooling','Corsair iCUE 4000D RGB  Mid-Tower ATX Case + True White and Thermalright Peerless Assassin 120','120 SE CPU cooler installed leaves 15mm of clearance space', 175);
+INSERT INTO BuildItems VALUES (0040, 0003, 'Monitor', '2 x KOORUI Curved 27-inch QHD Monitor', '180Hz, HDR10, VESA Adaptive-Sync', 382);
+INSERT INTO BuildItems VALUES (0041, 0003, 'Keyboard/mouse', 'Logitech K120 UK Layout Wired Standard Keyboard + Logitech M705 Wireless Laser Black Mouse','Wired keyboard spill-resistant, Wireless mouse 1000DPI 3-year battery', 56);
+INSERT INTO BuildItems VALUES (0042, 0003, 'Webcam','ToLuLu 1080p Webcam with Microphone', '1920 x 1080p Full HD at 30 fps', 20);
+INSERT INTO BuildItems VALUES (0043, 0003, 'Headset','Logitech H111 Closed-Back Headphones', 'Wired, rotating noise-canceling microphone', 9);
+INSERT INTO BuildItems VALUES (0044, 0003, 'Network/cables/adapters','2 x DisplayPort 1.4 cables + 2m Cat6 Ethernet cable', '32.4 Gbps, 250MHz 1Gbps RJ45 PoE', 25);
+INSERT INTO BuildItems VALUES (0045, 0003, 'Role-specific hardware peripheral', '3Dconnexion SpaceMouse Compact (3D navigation device)', '6DoF 3D sensor, wired USB', 110);
+INSERT INTO BuildItems VALUES (0046, 0003, 'Total hardware workstation cost', '', '', 2441);
+INSERT INTO BuildItems VALUES (0047, 0003, 'Role hardware budget', '', '', 2500);
+INSERT INTO BuildItems VALUES (0048, 0003, 'Under hardware budget', '', '', 59);
 
 
 -- Farouk (3D Visualisation Specialist)
