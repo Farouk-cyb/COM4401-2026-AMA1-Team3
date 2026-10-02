@@ -1,18 +1,16 @@
 -- create
 CREATE TABLE FinalRecommendation (
-  EMPLOYEEId INTEGER PRIMARY KEY,
-  Name TEXT NOT NULL,
+  Role TEXT NOT NULL,
   Quantity INT NOT NULL,
-  WrokstationType TEXT NOT NULL,
-  Budget DECIMAL,
-  EmployeeRole TEXT NOT NULL,
+  CostPerWorkstation INT NOT NULL,
+  TotalRoleCost INT NOT NULL,
   BudgetPosition TEXT NOT NULL
 );
 -- insert
-INSERT INTO FinalRecommendation VALUES (0001, 'Ahmed', 2, 'Visualisation', 6510.64, '3D Visualisation', "Under £989") ;
-INSERT INTO FinalRecommendation VALUES (0002, 'Zidan', 3,'Administrative Assistant', 2220, '3D Visualisation', "Under £630") ;
-INSERT INTO FinalRecommendation VALUES (0003, 'Roble', 5,'Architect', 12200, 'Architect', "Under £300") ;
-INSERT INTO FinalRecommendation VALUES (0004, ' ', 10, '10 Workstation ', 20691, ' ', "Under £4759") ;
+INSERT INTO FinalRecommendation VALUES ('Administrative Assistant (Zidan)', 3, 740, 2220, "Under £630") ;
+INSERT INTO FinalRecommendation VALUES ('Project Manager (N/A)', 2, 0, 0, "N/A") ;
+INSERT INTO FinalRecommendation VALUES ('Architect (Roble)', 5, 2440, 12200,"Under £300") ;
+INSERT INTO FinalRecommendation VALUES ('3D Visualisation Specialist (Farouk)', 2, 3255, 6510,"Under £989") ;
 
 -- fetch 
 SELECT * FROM FinalRecommendation;
