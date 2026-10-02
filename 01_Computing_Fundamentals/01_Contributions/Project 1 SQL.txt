@@ -1,0 +1,144 @@
+-- create
+CREATE TABLE EmployeeRoles (
+  RoleID INTEGER PRIMARY KEY,
+  RoleName VARCHAR(50),
+  StaffCount INTEGER,
+  Tasks VARCHAR(255),
+  PerformanceNeed VARCHAR(100),
+  BudgetPerUnit DECIMAL(10,1)
+);
+
+-- insert
+INSERT INTO EmployeeRoles VALUES (0001, 'Administrative Assistant (Zidan)', 3, "Email, documents, spreadsheets, web systems, online meetings, and basic customer records.", "Basic office hardware workstation", 950);
+INSERT INTO EmployeeRoles VALUES (0002, 'Project Manager (N/A)', 2, "Reports, meetings, project planning, reviewing drawings, dashboards, and client communication.", "Business hardware workstation with stronger display/workflow setup", 1300);
+INSERT INTO EmployeeRoles VALUES (0003, 'Architect (Roble)', 5, "CAD drawings, 2D drafting, 3D modelling, large design files, multiple monitors, and design reviews.", "CAD hardware workstation with dedicated GPU and suitable display", 2500);
+INSERT INTO EmployeeRoles VALUES (0004, '3D Visualisation Specialist (Farouk)', 2, "Rendering, 3D visualisation, large models, high-resolution textures, media output, and client visual presentations.", "High-performance rendering/visualisation hardware workstation", 3750);
+
+
+
+-- create
+CREATE TABLE WorkstationBuilds (
+  BuildID INTEGER PRIMARY KEY,
+  RoleID INTEGER,
+  BuildName TEXT NOT NULL,
+  source TEXT NOT NULL,
+  FOREIGN KEY (RoleID) REFERENCES EmployeeRoles(RoleID)
+);
+
+-- insert
+INSERT INTO WorkstationBuilds VALUES (0001, 0001, 'Administrative Assistant', 'https://github.com/Farouk-cyb/COM4401-2026-AMA1-Team3/blob/main/01_Computing_Fundamentals/01_Contributions/Administrative%20Assistant.md');
+INSERT INTO WorkstationBuilds VALUES (0002, 0002, 'Project Manager', 'N/A');
+INSERT INTO WorkstationBuilds VALUES (0003, 0003, 'Architect', 'N/A');
+INSERT INTO WorkstationBuilds VALUES (0004, 0004, '3D Visualisation Specialist', 'https://github.com/Farouk-cyb/COM4401-2026-AMA1-Team3/blob/main/01_Computing_Fundamentals/01_Contributions/Hardware(2).docx');
+
+
+
+-- create
+CREATE TABLE Recommendations (
+  RecommendationID INTEGER PRIMARY KEY,
+  RoleID INTEGER,
+  justification TEXT,
+  Approved BOOLEAN,
+  EthcalNotes TEXT,
+  FOREIGN KEY (RoleID) REFERENCES EmployeeRoles(RoleID)
+);
+
+-- insert
+INSERT INTO Recommendations VALUES (0001, 0001, 'Justification', '1', 'EthcalNotes');
+INSERT INTO Recommendations VALUES (0002, 0002, 'Justification', '1', 'EthcalNotes');
+INSERT INTO Recommendations VALUES (0003, 0003, 'Justification', '1', 'EthcalNotes');
+INSERT INTO Recommendations VALUES (0004, 0004, 'Justification', '1', 'EthcalNotes');
+
+
+
+-- create
+CREATE TABLE BuildItems (
+  ItemID INTEGER PRIMARY KEY,
+  BuildID INTEGER,
+  HardwareCategory VARCHAR (50),
+  ItemName VARCHAR (100),
+  Specification VARCHAR (150),
+  Cost DECIMAL (10,2),
+  FOREIGN KEY (BuildID) REFERENCES WorkstationBuilds(BuildID)
+);
+
+-- insert
+-- Zidan (Administrative Assistant)
+INSERT INTO BuildItems VALUES (0001, 0001, 'CPU', 'Intel Core i3-12100', '4 Cores / 8 Threads, 3.3 GHz, LGA1700 Socket', 120);
+INSERT INTO BuildItems VALUES (0002, 0001, 'Motherboard', 'MSI PRO H610M-E DDR4', 'Micro-ATX, Intel H610, 2x DIMM up to 64GB 3200MHz, PCIe 4.0, M.2 NVMe, HDMI/VGA', 60 );
+INSERT INTO BuildItems VALUES (0003, 0001, 'RAM','CORSAIR Vengeance LPX Black','16GB (2x8GB) DDR4 3200MHz CL16 Dual Channel', 145);
+INSERT INTO BuildItems VALUES (0004, 0001, 'Storage', 'Kingston NV3 M.2 2280 - SNV3S/1000G','1TB NVMe SSD Read 6000MB/s, Write 4000MB/s, PCIe 4.0', 150);
+INSERT INTO BuildItems VALUES (0005, 0001, 'GPU', 'Integrated Intel UHD Graphics 730','N/A - Integrated with CPU', 0);
+INSERT INTO BuildItems VALUES (0006, 0001, 'PSU', 'MSI MAG A550BN', '550W 80 PLUS Bronze Power Supply', 45);
+INSERT INTO BuildItems VALUES (0007, 0001, 'Case/cooling','Fractal Design Core 1100 Black + Intel Laminar RM1 Boxed Cooler','Micro-ATX Mini Tower Case, and the included cooler from the CPU', 40);
+INSERT INTO BuildItems VALUES (0008, 0001, 'Monitor', 'PHILIPS 24E1N1200A IPS Monitor - Black', '24", 1080p, 120Hz, 1ms, Speakers, HDMI/VGA/DP', 75);
+INSERT INTO BuildItems VALUES (0009, 0001, 'Keyboard/mouse', 'Logitech Combo MK270 Combo','Wireless Desktop Keyboard and Mouse USB', 25);
+INSERT INTO BuildItems VALUES (0010, 0001, 'Webcam','Logitech Brio 100 Full HD Webcam - Graphite', '1080p, Auto-Light, Privacy Shutter, Mic', 40);
+INSERT INTO BuildItems VALUES (0011, 0001, 'Headset','Logitech H390 Stereo MIC USB Black', 'Noise-Cancelling, USB-A Plug-and-Play', 25);
+INSERT INTO BuildItems VALUES (0012, 0001, 'Network/cables/adapters','TP-Link Archer T2U Plus', 'USB 2.0, Dual Band Wi-Fi 5 802.11ac, 5dBi Antenna', 15);
+INSERT INTO BuildItems VALUES (0013, 0001, 'Role-specific hardware peripheral', 'N/A', 'N/A', 0);
+INSERT INTO BuildItems VALUES (0014, 0001, 'Total hardware workstation cost', ' ', ' ', 740);
+INSERT INTO BuildItems VALUES (0015, 0001, 'Role hardware budget', ' ', ' ', 950);
+INSERT INTO BuildItems VALUES (0016, 0001, 'Under hardware budget', ' ', '', 210);
+
+-- N/A (Project Manager)
+INSERT INTO BuildItems VALUES (0017, 0002, 'CPU', '', '', NULL);
+INSERT INTO BuildItems VALUES (0018, 0002, 'Motherboard', '', '', NULL);
+INSERT INTO BuildItems VALUES (0019, 0002, 'RAM','','', NULL);
+INSERT INTO BuildItems VALUES (0020, 0002, 'Storage', '','', NULL);
+INSERT INTO BuildItems VALUES (0021, 0002, 'GPU', '', '', NULL);
+INSERT INTO BuildItems VALUES (0022, 0002, 'PSU', '', '', NULL);
+INSERT INTO BuildItems VALUES (0023, 0002, 'Case/cooling','','', NULL);
+INSERT INTO BuildItems VALUES (0024, 0002, 'Monitor', '', '', NULL);
+INSERT INTO BuildItems VALUES (0025, 0002, 'Keyboard/mouse', '','', NULL);
+INSERT INTO BuildItems VALUES (0026, 0002, 'Webcam','', '', NULL);
+INSERT INTO BuildItems VALUES (0027, 0002, 'Headset','', '', NULL);
+INSERT INTO BuildItems VALUES (0028, 0002, 'Network/cables/adapters','', '', NULL);
+INSERT INTO BuildItems VALUES (0029, 0002, 'Role-specific hardware peripheral', '', '', NULL);
+INSERT INTO BuildItems VALUES (0030, 0002, 'Total hardware workstation cost', '', '', NULL);
+INSERT INTO BuildItems VALUES (0031, 0002, 'Role hardware budget', '', '', NULL);
+INSERT INTO BuildItems VALUES (0032, 0002, 'Under/over hardware budget', '', '', NULL);
+
+
+-- Roble (Architect)
+INSERT INTO BuildItems VALUES (0033, 0003, 'CPU', '', '', NULL);
+INSERT INTO BuildItems VALUES (0034, 0003, 'Motherboard', '', '', NULL);
+INSERT INTO BuildItems VALUES (0035, 0003, 'RAM','','', NULL);
+INSERT INTO BuildItems VALUES (0036, 0003, 'Storage', '','', NULL);
+INSERT INTO BuildItems VALUES (0037, 0003, 'GPU', '', '', NULL);
+INSERT INTO BuildItems VALUES (0038, 0003, 'PSU', '', '', NULL);
+INSERT INTO BuildItems VALUES (0039, 0003, 'Case/cooling','','', NULL);
+INSERT INTO BuildItems VALUES (0040, 0003, 'Monitor', '', '', NULL);
+INSERT INTO BuildItems VALUES (0041, 0003, 'Keyboard/mouse', '','', NULL);
+INSERT INTO BuildItems VALUES (0042, 0003, 'Webcam','', '', NULL);
+INSERT INTO BuildItems VALUES (0043, 0003, 'Headset','', '', NULL);
+INSERT INTO BuildItems VALUES (0044, 0003, 'Network/cables/adapters','', '', NULL);
+INSERT INTO BuildItems VALUES (0045, 0003, 'Role-specific hardware peripheral', '', '', NULL);
+INSERT INTO BuildItems VALUES (0046, 0003, 'Total hardware workstation cost', '', '', NULL);
+INSERT INTO BuildItems VALUES (0047, 0003, 'Role hardware budget', '', '', NULL);
+INSERT INTO BuildItems VALUES (0048, 0003, 'Under/over hardware budget', '', '', NULL);
+
+
+-- Farouk (3D Visualisation Specialist)
+INSERT INTO BuildItems VALUES (0049, 0004, 'Case', 'Corsair 3200D RS Black ', 'Support motherboard size  ATX, Micro ATX, Mini ATX. Has 7 expansion slots.', '59.99');
+INSERT INTO BuildItems VALUES (0050, 0004, 'CPU', 'CPU AMD Ryzen 9 9950X3D', 'AM5 socket with a total of 16 Cores, 32 threads', '499.99' );
+INSERT INTO BuildItems VALUES (0051, 0004, 'Motherboard','Asus X870E ProArt CREATOR WIFI AM5 DDR5 ATX ','Max Memory 256 GB , one temperature header, 8-pin CPU power', '449.99');
+INSERT INTO BuildItems VALUES (0052, 0004, 'GPU', 'GeForce RTX 5060','core count 3840 Memory GDDR7','439.99');
+INSERT INTO BuildItems VALUES (0053, 0004, 'RAM', 'Kingston FURY Beast 64GB','DDR5 64GP 5600 speed','799.99');
+INSERT INTO BuildItems VALUES (0054, 0004, 'CPU Cooler', 'ARCTIC Liquid Freezer', 'socket support AM4 AM5 LGA 1700 LGA 1851, Type Water cooling', '74.99');
+INSERT INTO BuildItems VALUES (0055, 0004, 'Storage','Samsung 990 EVO Plus','2000 GB, M.2-2280 form facror','246.99');
+INSERT INTO BuildItems VALUES (0056, 0004, 'Power supply','MSI MAG A750GL PCIE5 750W', 'ATX, 750 W, SATA 8','79.99');
+INSERT INTO BuildItems VALUES (0057, 0004, 'Fan Case', 'Lian Li Uni fan SL-infinity 140mm ARGB PWM Reverse', 'Min Airflow 71.6 CFM, Min Noise 28.6 dB','25.98');
+INSERT INTO BuildItems VALUES (0058, 0004, 'Monitor', 'Asus ROG Strix', '27 in screen size, 180 refresh rate', '437.98');
+INSERT INTO BuildItems VALUES (0059, 0004, 'Mouse', 'Logitech M200 Wireless','Wireless 2.4GHz connectivity', '17.49');
+INSERT INTO BuildItems VALUES (0060, 0004, 'Keyboard', 'Logitech K780 Wireless Slim Keyboard','ANSI Layout, Tactile switch type', '69.99');
+INSERT INTO BuildItems VALUES (0061, 0004, 'Microphone', 'FIFINE A6T Microphone','USB-C, USB-A connectivity Type','51.96');
+INSERT INTO BuildItems VALUES (0062, 0004, 'Total cost', 'workstation', 'N/A', '3255.32');
+INSERT INTO BuildItems VALUES (0063, 0004, 'Total cost*2', 'workstation', 'N/A', '6510.64');
+INSERT INTO BuildItems VALUES (0064, 0004, 'Role Budget', 'Workstation', 'N/A', '7500');
+INSERT INTO BuildItems VALUES (0065, 0004, 'Under the budget', 'Workstation', 'N/A', '989.36');
+
+
+-- fetch
+
+
