@@ -4,11 +4,11 @@
         <attribute name="name" value="Pennine Pizza Works Ordering System"/>
         <attribute name="authors" value="Pennine Pizza Works Team"/>
         <attribute name="about" value="Pizza ordering and bill calculation system"/>
-        <attribute name="saved" value="2026-10-09 10:40:40 AM"/>
+        <attribute name="saved" value="2026-10-09 11:03:32 AM"/>
         <attribute name="created" value="2026-10-08 12:00:00 PM"/>
         <attribute name="edited" value="2026-10-08 12:00:00 PM"/>
         <attribute name="edited" value="emlkYW47REVTS1RPUC1SSjA0RktGOzIwMjYtMTAtMDg7MTI6MjY6MTIgUE07MjsyOTc0"/>
-        <attribute name="edited" value="U3R1ZGVudHM7QzItMTdMQUI7MjAyNi0xMC0wOTsxMDo0MDo0MCBBTTsxOzI2OTc="/>
+        <attribute name="edited" value="U3R1ZGVudHM7QzItMTdMQUI7MjAyNi0xMC0wOTsxMTowMzozMiBBTTsyOzI2OTk="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -121,15 +121,15 @@
                 </else>
             </if>
             <assign variable="finalprice" expression="subtotal - discount + deliverycost"/>
-            <output expression="&quot;PENNINE PIZZA WORKS&quot;" newline="True"/>
+            <output expression="&quot;Pennine Pizza Works&quot;" newline="True"/>
             <output expression="&quot;Customer Name: &quot; &amp; name" newline="True"/>
             <output expression="&quot;Customer Address: &quot; &amp; address" newline="True"/>
             <output expression="&quot;Phone Number: &quot; &amp; number" newline="True"/>
-            <output expression="&quot;Number of Pizzas: &quot; &amp; numberofpizza" newline="True"/>
+            <output expression="&quot;Number Of Pizzas: &quot; &amp; numberofpizza" newline="True"/>
             <output expression="&quot;Order Subtotal: &#163;&quot; &amp; subtotal" newline="True"/>
             <output expression="&quot;Discount (10%): -&#163;&quot; &amp; discount" newline="True"/>
-            <output expression="&quot;Delivery Fee     : &#163;&quot; &amp; deliverycost" newline="True"/>
-            <output expression="&quot;FINAL TOTAL DUE: &#163;&quot; &amp; finalprice" newline="True"/>
+            <output expression="&quot;Delivery Fee: &#163;&quot; &amp; deliverycost" newline="True"/>
+            <output expression="&quot;Final Price: &#163;&quot; &amp; finalprice" newline="True"/>
         </body>
     </function>
 </flowgorithm>
