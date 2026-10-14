@@ -81,24 +81,23 @@ INSERT INTO BuildItems VALUES (0014, 0001, 'Total hardware workstation cost', ' 
 INSERT INTO BuildItems VALUES (0015, 0001, 'Role hardware budget', ' ', ' ', 950);
 INSERT INTO BuildItems VALUES (0016, 0001, 'Under hardware budget', ' ', '', 210);
 
--- N/A (Project Manager)
-INSERT INTO BuildItems VALUES (0017, 0002, 'CPU', '', '', NULL);
-INSERT INTO BuildItems VALUES (0018, 0002, 'Motherboard', '', '', NULL);
-INSERT INTO BuildItems VALUES (0019, 0002, 'RAM','','', NULL);
-INSERT INTO BuildItems VALUES (0020, 0002, 'Storage', '','', NULL);
-INSERT INTO BuildItems VALUES (0021, 0002, 'GPU', '', '', NULL);
-INSERT INTO BuildItems VALUES (0022, 0002, 'PSU', '', '', NULL);
-INSERT INTO BuildItems VALUES (0023, 0002, 'Case/cooling','','', NULL);
-INSERT INTO BuildItems VALUES (0024, 0002, 'Monitor', '', '', NULL);
-INSERT INTO BuildItems VALUES (0025, 0002, 'Keyboard/mouse', '','', NULL);
-INSERT INTO BuildItems VALUES (0026, 0002, 'Webcam','', '', NULL);
-INSERT INTO BuildItems VALUES (0027, 0002, 'Headset','', '', NULL);
-INSERT INTO BuildItems VALUES (0028, 0002, 'Network/cables/adapters','', '', NULL);
-INSERT INTO BuildItems VALUES (0029, 0002, 'Role-specific hardware peripheral', '', '', NULL);
-INSERT INTO BuildItems VALUES (0030, 0002, 'Total hardware workstation cost', '', '', NULL);
-INSERT INTO BuildItems VALUES (0031, 0002, 'Role hardware budget', '', '', NULL);
-INSERT INTO BuildItems VALUES (0032, 0002, 'Under/over hardware budget', '', '', NULL);
-
+-- Roble (Project Manager)
+INSERT INTO BuildItems VALUES (0017, 0002, 'CPU', 'Intel Core i5 14400', '10 cores / 16 threads, integrated UHD 730 graphics', 160);
+INSERT INTO BuildItems VALUES (0018, 0002, 'Motherboard', 'MSI B760 PRO M-P', 'DDR4 Micro ATX', 90);
+INSERT INTO BuildItems VALUES (0019, 0002, 'RAM','Corsair Vengeance LPX Black','16GB (2x8GB) DDR4 3200 CL16', 165);
+INSERT INTO BuildItems VALUES (0020, 0002, 'Storage', 'Kingston NV3 PCIe 4.0','NVMe SSD 2280 1TB', 129);
+INSERT INTO BuildItems VALUES (0021, 0002, 'GPU', 'Integrated Intel UHD Graphics', 'N/A - Integrated with CPU', 0);
+INSERT INTO BuildItems VALUES (0022, 0002, 'PSU', 'Corsair RM650e (2025) Black', '650W Fully Modular', 74);
+INSERT INTO BuildItems VALUES (0023, 0002, 'Case/cooling','Corsair iCUE 4000D RGB AIRFLOW + Intel boxed cooler','Mid-Tower ATX Case - True White, boxed cooler comes with the CPU', 129);
+INSERT INTO BuildItems VALUES (0024, 0002, 'Monitor', '2 x KOORUI Curved', '27-inch QHD Monitor, 180Hz, HDR10, VESA Adaptive-Sync', 368);
+INSERT INTO BuildItems VALUES (0025, 0002, 'Keyboard/mouse', 'Logitech K120 UK Layout Wired Standard Keyboard + Logitech M705 Wireless Laser Black Mouse','Wired Keyboard for maximum responsiveness, Wireless Mouse for efficiency/comfort', 57);
+INSERT INTO BuildItems VALUES (0026, 0002, 'Webcam','ToLuLu Webcam', '1080p, comes with Microphone', 18);
+INSERT INTO BuildItems VALUES (0027, 0002, 'Headset','Logitech H111 Closed-Back Headphones', 'Closed-back headphones reduce background noise during online meetings.', 9);
+INSERT INTO BuildItems VALUES (0028, 0002, 'Network/cables/adapters','DisplayPort cable (£10) + HDMI cable (£10) + 2m Cat6 Ethernet cable (£5)', 'Needed to connect two monitors, with stable wired connection', 25);
+INSERT INTO BuildItems VALUES (0029, 0002, 'Role-specific hardware peripheral', 'N/A', 'N/A', 0);
+INSERT INTO BuildItems VALUES (0030, 0002, 'Total hardware workstation cost', '', '', 1224);
+INSERT INTO BuildItems VALUES (0031, 0002, 'Role hardware budget', '', '', 1300);
+INSERT INTO BuildItems VALUES (0032, 0002, 'Under hardware budget', '', '', 76);
 
 -- Roble (Architect)
 INSERT INTO BuildItems VALUES (0033, 0003, 'CPU', 'AMD Ryzen 7 9700X', '8 Cores / 16 Threads, 3.8GHz, AM5', 245);
