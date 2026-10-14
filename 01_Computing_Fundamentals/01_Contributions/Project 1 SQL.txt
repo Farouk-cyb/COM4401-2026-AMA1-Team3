@@ -27,8 +27,8 @@ CREATE TABLE WorkstationBuilds (
 
 -- insert
 INSERT INTO WorkstationBuilds VALUES (0001, 0001, 'Administrative Assistant', 'https://github.com/Farouk-cyb/COM4401-2026-AMA1-Team3/blob/main/01_Computing_Fundamentals/01_Contributions/Administrative%20Assistant.md');
-INSERT INTO WorkstationBuilds VALUES (0002, 0002, 'Project Manager', 'N/A');
-INSERT INTO WorkstationBuilds VALUES (0003, 0003, 'Architect', 'N/A');
+INSERT INTO WorkstationBuilds VALUES (0002, 0002, 'Project Manager', 'https://github.com/Farouk-cyb/COM4401-2026-AMA1-Team3/blob/main/01_Computing_Fundamentals/01_Contributions/Project_Manager_role.md');
+INSERT INTO WorkstationBuilds VALUES (0003, 0003, 'Architect', 'https://github.com/Farouk-cyb/COM4401-2026-AMA1-Team3/blob/main/01_Computing_Fundamentals/01_Contributions/architect.md');
 INSERT INTO WorkstationBuilds VALUES (0004, 0004, '3D Visualisation Specialist', 'https://github.com/Farouk-cyb/COM4401-2026-AMA1-Team3/blob/main/01_Computing_Fundamentals/01_Contributions/Hardware(2).docx');
 
 
