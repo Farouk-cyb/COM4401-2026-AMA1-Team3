@@ -119,23 +119,23 @@ INSERT INTO BuildItems VALUES (0048, 0003, 'Under hardware budget', '', '', 59);
 
 
 -- Farouk (3D Visualisation Specialist)
-INSERT INTO BuildItems VALUES (0049, 0004, 'Case', 'Corsair 3200D RS Black ', 'Support motherboard size  ATX, Micro ATX, Mini ATX. Has 7 expansion slots.', '59.99');
-INSERT INTO BuildItems VALUES (0050, 0004, 'CPU', 'CPU AMD Ryzen 9 9950X3D', 'AM5 socket with a total of 16 Cores, 32 threads', '499.99' );
-INSERT INTO BuildItems VALUES (0051, 0004, 'Motherboard','Asus X870E ProArt CREATOR WIFI AM5 DDR5 ATX ','Max Memory 256 GB , one temperature header, 8-pin CPU power', '449.99');
-INSERT INTO BuildItems VALUES (0052, 0004, 'GPU', 'GeForce RTX 5060','core count 3840 Memory GDDR7','439.99');
-INSERT INTO BuildItems VALUES (0053, 0004, 'RAM', 'Kingston FURY Beast 64GB','DDR5 64GP 5600 speed','799.99');
-INSERT INTO BuildItems VALUES (0054, 0004, 'CPU Cooler', 'ARCTIC Liquid Freezer', 'socket support AM4 AM5 LGA 1700 LGA 1851, Type Water cooling', '74.99');
-INSERT INTO BuildItems VALUES (0055, 0004, 'Storage','Samsung 990 EVO Plus','2000 GB, M.2-2280 form facror','246.99');
-INSERT INTO BuildItems VALUES (0056, 0004, 'Power supply','MSI MAG A750GL PCIE5 750W', 'ATX, 750 W, SATA 8','79.99');
-INSERT INTO BuildItems VALUES (0057, 0004, 'Fan Case', 'Lian Li Uni fan SL-infinity 140mm ARGB PWM Reverse', 'Min Airflow 71.6 CFM, Min Noise 28.6 dB','25.98');
-INSERT INTO BuildItems VALUES (0058, 0004, 'Monitor', 'Asus ROG Strix', '27 in screen size, 180 refresh rate', '437.98');
-INSERT INTO BuildItems VALUES (0059, 0004, 'Mouse', 'Logitech M200 Wireless','Wireless 2.4GHz connectivity', '17.49');
-INSERT INTO BuildItems VALUES (0060, 0004, 'Keyboard', 'Logitech K780 Wireless Slim Keyboard','ANSI Layout, Tactile switch type', '69.99');
-INSERT INTO BuildItems VALUES (0061, 0004, 'Microphone', 'FIFINE A6T Microphone','USB-C, USB-A connectivity Type','51.96');
-INSERT INTO BuildItems VALUES (0062, 0004, 'Total cost', 'workstation', 'N/A', '3255.32');
-INSERT INTO BuildItems VALUES (0063, 0004, 'Total cost*2', 'workstation', 'N/A', '6510.64');
-INSERT INTO BuildItems VALUES (0064, 0004, 'Role Budget', 'Workstation', 'N/A', '7500');
-INSERT INTO BuildItems VALUES (0065, 0004, 'Under the budget', 'Workstation', 'N/A', '989.36');
+INSERT INTO BuildItems VALUES (0049, 0004, 'Case', 'Corsair 3200D RS Black ', 'Support motherboard size  ATX, Micro ATX, Mini ATX. Has 7 expansion slots.', 60);
+INSERT INTO BuildItems VALUES (0050, 0004, 'CPU', 'CPU AMD Ryzen 9 9950X3D', 'AM5 socket with a total of 16 Cores, 32 threads', 500 );
+INSERT INTO BuildItems VALUES (0051, 0004, 'Motherboard','Asus X870E ProArt CREATOR WIFI AM5 DDR5 ATX ','Max Memory 256 GB , one temperature header, 8-pin CPU power', 450);
+INSERT INTO BuildItems VALUES (0052, 0004, 'GPU', 'GeForce RTX 5060','core count 3840 Memory GDDR7',440);
+INSERT INTO BuildItems VALUES (0053, 0004, 'RAM', 'Kingston FURY Beast 64GB','DDR5 64GP 5600 speed',800);
+INSERT INTO BuildItems VALUES (0054, 0004, 'CPU Cooler', 'ARCTIC Liquid Freezer', 'socket support AM4 AM5 LGA 1700 LGA 1851, Type Water cooling', 75);
+INSERT INTO BuildItems VALUES (0055, 0004, 'Storage','Samsung 990 EVO Plus','2000 GB, M.2-2280 form facror',247);
+INSERT INTO BuildItems VALUES (0056, 0004, 'Power supply','MSI MAG A750GL PCIE5 750W', 'ATX, 750 W, SATA 8',80);
+INSERT INTO BuildItems VALUES (0057, 0004, 'Fan Case', 'Lian Li Uni fan SL-infinity 140mm ARGB PWM Reverse', 'Min Airflow 71.6 CFM, Min Noise 28.6 dB',26);
+INSERT INTO BuildItems VALUES (0058, 0004, 'Monitor', 'Asus ROG Strix', '27 in screen size, 180 refresh rate', 438);
+INSERT INTO BuildItems VALUES (0059, 0004, 'Mouse', 'Logitech M200 Wireless','Wireless 2.4GHz connectivity', 17.50);
+INSERT INTO BuildItems VALUES (0060, 0004, 'Keyboard', 'Logitech K780 Wireless Slim Keyboard','ANSI Layout, Tactile switch type', 70);
+INSERT INTO BuildItems VALUES (0061, 0004, 'Microphone', 'FIFINE A6T Microphone','USB-C, USB-A connectivity Type', 52);
+INSERT INTO BuildItems VALUES (0062, 0004, 'Total cost', 'workstation', 'N/A', 3255.5);
+INSERT INTO BuildItems VALUES (0063, 0004, 'Total cost*2', 'workstation', 'N/A', 6511);
+INSERT INTO BuildItems VALUES (0064, 0004, 'Role Budget', 'Workstation', 'N/A', 7500);
+INSERT INTO BuildItems VALUES (0065, 0004, 'Under the budget', 'Workstation', 'N/A', 989);
 
 
 -- fetch
