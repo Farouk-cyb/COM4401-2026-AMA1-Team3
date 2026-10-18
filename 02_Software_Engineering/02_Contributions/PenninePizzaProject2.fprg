@@ -4,89 +4,89 @@
         <attribute name="name" value="Pennine Pizza Works Ordering System"/>
         <attribute name="authors" value="Pennine Pizza Works Team"/>
         <attribute name="about" value="Pizza ordering and bill calculation system"/>
-        <attribute name="saved" value="2026-10-18 02:44:41 PM"/>
+        <attribute name="saved" value="2026-10-18 03:04:36 PM"/>
         <attribute name="created" value="2026-10-08 12:00:00 PM"/>
         <attribute name="edited" value="2026-10-08 12:00:00 PM"/>
-        <attribute name="edited" value="emlkYW47REVTS1RPUC1SSjA0RktGOzIwMjYtMTAtMTg7MDI6NDQ6NDEgUE07NDsyOTc4"/>
+        <attribute name="edited" value="emlkYW47REVTS1RPUC1SSjA0RktGOzIwMjYtMTAtMTg7MDM6MDQ6MzYgUE07NTsyOTgw"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="customerName, customerAddress, deliveryReq, pizzaSize" type="String" array="False" size=""/>
-            <declare name="numPizzas, i, numToppings, customerPhone" type="Integer" array="False" size=""/>
-            <declare name="basePrice, toppingPrice, itemTotal, subtotal, discount, deliveryCharge, finalTotal" type="Real" array="False" size=""/>
+            <declare name="name, address, delivery, pizzasize" type="String" array="False" size=""/>
+            <declare name="numberofpizzas, numberoftoppings, phonenumber, i" type="Integer" array="False" size=""/>
+            <declare name="baseprice, toppingprice, itemtotal, subtotal, discount, deliverycost, finaltotal" type="Real" array="False" size=""/>
             <assign variable="subtotal" expression="0.0"/>
             <assign variable="discount" expression="0.0"/>
-            <assign variable="deliveryCharge" expression="0.0"/>
+            <assign variable="deliverycost" expression="0.0"/>
             <output expression="&quot;Welcome to Pennine Pizza!&quot;" newline="True"/>
             <output expression="&quot;Enter your name:&quot;" newline="True"/>
-            <input variable="customerName"/>
+            <input variable="name"/>
             <output expression="&quot;Enter your address:&quot;" newline="True"/>
-            <input variable="customerAddress"/>
+            <input variable="address"/>
             <output expression="&quot;Enter your phone number:&quot;" newline="True"/>
-            <input variable="customerPhone"/>
-            <do expression="numPizzas &lt; 1 or numPizzas &gt; 6">
+            <input variable="phonenumber"/>
+            <do expression="numberofpizzas &lt; 1 or numberofpizzas &gt; 6">
                 <output expression="&quot;How many pizzas would you like? (1 to 6):&quot;" newline="True"/>
-                <input variable="numPizzas"/>
-                <if expression="numPizzas &lt; 1 or numPizzas &gt; 6">
+                <input variable="numberofpizzas"/>
+                <if expression="numberofpizzas &lt; 1 or numberofpizzas &gt; 6">
                     <then>
                         <output expression="&quot;Invalid. Pennine Pizza allows orders between 1 and 6 pizzas.&quot;" newline="True"/>
                     </then>
                     <else/>
                 </if>
             </do>
-            <for variable="i" start="1" end="numPizzas" direction="inc" step="1">
+            <for variable="i" start="1" end="numberofpizzas " direction="inc" step="1">
                 <output expression="&quot;Pizza #&quot; &amp; i" newline="True"/>
-                <do expression="pizzaSize != &quot;S&quot; and pizzaSize != &quot;M&quot; and pizzaSize != &quot;L&quot; and pizzaSize != &quot;s&quot; and pizzaSize != &quot;m&quot; and pizzaSize != &quot;l&quot;">
+                <do expression="pizzasize != &quot;S&quot; and pizzasize != &quot;M&quot; and pizzasize != &quot;L&quot; and pizzasize != &quot;s&quot; and pizzasize != &quot;m&quot; and pizzasize != &quot;l&quot;">
                     <output expression="&quot;Select Pizza Size (S = Small [&#163;3.25], M = Medium [&#163;5.50], L = Large [&#163;7.15]):&quot;" newline="True"/>
-                    <input variable="pizzaSize"/>
+                    <input variable="pizzasize"/>
                 </do>
-                <if expression="pizzaSize = &quot;S&quot; or pizzaSize = &quot;s&quot;">
+                <if expression="pizzasize = &quot;S&quot; or pizzasize = &quot;s&quot;">
                     <then>
-                        <assign variable="basePrice" expression="3.25"/>
+                        <assign variable="baseprice" expression="3.25"/>
                     </then>
                     <else>
-                        <if expression="pizzaSize = &quot;M&quot; or pizzaSize = &quot;m&quot;">
+                        <if expression="pizzasize = &quot;M&quot; or pizzasize = &quot;m&quot;">
                             <then>
-                                <assign variable="basePrice" expression="5.50"/>
+                                <assign variable="baseprice" expression="5.50"/>
                             </then>
                             <else>
-                                <assign variable="basePrice" expression="7.15"/>
+                                <assign variable="baseprice" expression="7.15"/>
                             </else>
                         </if>
                     </else>
                 </if>
-                <do expression="numToppings &lt; 0">
+                <do expression="numberoftoppings &lt; 0">
                     <output expression="&quot;How many toppings would you like? (0 or more):&quot;" newline="True"/>
-                    <input variable="numToppings"/>
-                    <if expression="numToppings &lt; 0">
+                    <input variable="numberoftoppings"/>
+                    <if expression="numberoftoppings &lt; 0">
                         <then>
                             <output expression="&quot;Invalid. Please re-enter:&quot;" newline="True"/>
                         </then>
                         <else/>
                     </if>
                 </do>
-                <if expression="numToppings = 0">
+                <if expression="numberoftoppings = 0">
                     <then>
-                        <assign variable="toppingPrice" expression="0.0"/>
+                        <assign variable="toppingprice" expression="0.0"/>
                     </then>
                     <else>
-                        <if expression="numToppings = 1">
+                        <if expression="numberoftoppings = 1">
                             <then>
-                                <assign variable="toppingPrice" expression="0.75"/>
+                                <assign variable="toppingprice" expression="0.75"/>
                             </then>
                             <else>
-                                <if expression="numToppings = 2">
+                                <if expression="numberoftoppings = 2">
                                     <then>
-                                        <assign variable="toppingPrice" expression="1.35"/>
+                                        <assign variable="toppingprice" expression="1.35"/>
                                     </then>
                                     <else>
-                                        <if expression="numToppings = 3">
+                                        <if expression="numberoftoppings = 3">
                                             <then>
-                                                <assign variable="toppingPrice" expression="2.00"/>
+                                                <assign variable="toppingprice" expression="2.00"/>
                                             </then>
                                             <else>
-                                                <assign variable="toppingPrice" expression="2.50"/>
+                                                <assign variable="toppingprice" expression="2.50"/>
                                             </else>
                                         </if>
                                     </else>
@@ -95,20 +95,20 @@
                         </if>
                     </else>
                 </if>
-                <assign variable="itemTotal" expression="basePrice + toppingPrice"/>
-                <assign variable="subtotal" expression="subtotal + itemTotal"/>
-                <output expression="&quot;Pizza #&quot; &amp; i &amp; &quot; Total: &#163;&quot; &amp; itemTotal &amp; &quot; (Base: &#163;&quot; &amp; basePrice &amp; &quot;, Toppings: &#163;&quot; &amp; toppingPrice &amp; &quot;)&quot;" newline="True"/>
+                <assign variable="itemtotal" expression="baseprice + toppingprice"/>
+                <assign variable="subtotal" expression="subtotal + itemtotal"/>
+                <output expression="&quot;Pizza #&quot; &amp; i &amp; &quot; Total: &#163;&quot; &amp; itemtotal &amp; &quot; (Base: &#163;&quot; &amp; baseprice &amp; &quot;, Toppings: &#163;&quot; &amp; toppingprice &amp; &quot;)&quot;" newline="True"/>
             </for>
-            <do expression="deliveryReq != &quot;Y&quot; and deliveryReq != &quot;N&quot; and deliveryReq != &quot;y&quot; and deliveryReq != &quot;n&quot;">
+            <do expression="delivery != &quot;Y&quot; and delivery != &quot;N&quot; and delivery != &quot;y&quot; and delivery != &quot;n&quot;">
                 <output expression="&quot;Would you like this order to be delivered? (Y/N):&quot;" newline="True"/>
-                <input variable="deliveryReq"/>
+                <input variable="delivery"/>
             </do>
-            <if expression="deliveryReq = &quot;Y&quot; or deliveryReq = &quot;y&quot;">
+            <if expression="delivery = &quot;Y&quot; or delivery = &quot;y&quot;">
                 <then>
-                    <assign variable="deliveryCharge" expression="2.50"/>
+                    <assign variable="deliverycost" expression="2.50"/>
                 </then>
                 <else>
-                    <assign variable="deliveryCharge" expression="0.0"/>
+                    <assign variable="deliverycost" expression="0.0"/>
                 </else>
             </if>
             <if expression="subtotal &gt; 20.00">
@@ -119,17 +119,17 @@
                     <assign variable="discount" expression="0.0"/>
                 </else>
             </if>
-            <assign variable="finalTotal" expression="subtotal - discount + deliveryCharge"/>
+            <assign variable="finaltotal" expression="subtotal - discount + deliverycost"/>
             <output expression="&quot;PENNINE PIZZA WORKS&quot;" newline="True"/>
             <output expression="&quot;ITEMISED RECEIPT&quot;" newline="True"/>
-            <output expression="&quot;Customer Name: &quot; &amp; customerName" newline="True"/>
-            <output expression="&quot;Customer Address: &quot; &amp; customerAddress" newline="True"/>
-            <output expression="&quot;Phone Number: &quot; &amp; customerPhone" newline="True"/>
-            <output expression="&quot;Number of Pizzas: &quot; &amp; numPizzas" newline="True"/>
+            <output expression="&quot;Customer Name: &quot; &amp; name" newline="True"/>
+            <output expression="&quot;Customer Address: &quot; &amp; address" newline="True"/>
+            <output expression="&quot;Phone Number: &quot; &amp; phonenumber" newline="True"/>
+            <output expression="&quot;Number of Pizzas: &quot; &amp; numberofpizzas" newline="True"/>
             <output expression="&quot;Order Subtotal: &#163;&quot; &amp; subtotal" newline="True"/>
             <output expression="&quot;Discount (10%): -&#163;&quot; &amp; discount" newline="True"/>
-            <output expression="&quot;Delivery Fee: &#163;&quot; &amp; deliveryCharge" newline="True"/>
-            <output expression="&quot;FINAL TOTAL DUE: &#163;&quot; &amp; finalTotal" newline="True"/>
+            <output expression="&quot;Delivery Fee: &#163;&quot; &amp; deliverycost" newline="True"/>
+            <output expression="&quot;FINAL TOTAL DUE: &#163;&quot; &amp; finaltotal" newline="True"/>
         </body>
     </function>
 </flowgorithm>
