@@ -62,4 +62,7 @@ INSERT INTO BuildItems VALUES (0017, 0017, 'Under the budget', 'Workstation', 'N
 
 
 -- fetch 
-SELECT * FROM BuildItems;
+SELECT * FROM EmployeeRoles ;
+SELECT * FROM WorkstationBuilds ;
+SELECT * FROM Recommendations;
+SELECT * FROM BuildItems ;
